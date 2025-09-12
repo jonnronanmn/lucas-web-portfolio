@@ -79,14 +79,15 @@ const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 function onRecaptchaSuccess(token) {
   recaptchaToken.value = token;
 }
+
 function onRecaptchaExpired() {
   recaptchaToken.value = '';
 }
 
 // Render reCAPTCHA
 function renderRecaptcha() {
-  if (!window.grecaptcha) {
-    console.error('reCAPTCHA not loaded');
+  if (!window.grecaptcha || !recaptchaContainer.value) {
+    console.error('reCAPTCHA not loaded or container missing');
     return;
   }
   recaptchaWidgetId.value = window.grecaptcha.render(recaptchaContainer.value, {
@@ -150,16 +151,16 @@ const handleSubmit = async () => {
   }
 };
 
-// Mount reCAPTCHA
+// Mount reCAPTCHA when script and container are ready
 onMounted(() => {
-  const interval = setInterval(() => {
-    if (window.grecaptcha && window.grecaptcha.render) {
+  const waitForRecaptcha = () => {
+    if (window.grecaptcha && recaptchaContainer.value) {
       renderRecaptcha();
-      clearInterval(interval);
+    } else {
+      requestAnimationFrame(waitForRecaptcha);
     }
-  }, 100);
-
-  onBeforeUnmount(() => clearInterval(interval));
+  };
+  waitForRecaptcha();
 });
 </script>
 

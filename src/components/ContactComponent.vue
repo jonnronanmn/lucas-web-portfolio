@@ -269,7 +269,6 @@ onMounted(() => {
   border-color: #6610f2;
 }
 
-/* Submit Button */
 .btn-submit {
   background-color: #0d6efd;
   color: #fff;

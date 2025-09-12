@@ -1,0 +1,7 @@
+body, html, #app {
+  background-color: #031624;
+  color: #ffffff; /* optional: make text readable */
+  min-height: 100vh; /* ensures full height */
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* if you want your Google font */
+}

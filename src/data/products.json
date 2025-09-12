@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce API Documentation",
+    "description": "Dynamic E-Commerce Workflow Management with order processing, inventory updates, user authentication, and API docs via Postman.",
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*k-EVKmqO79ojOcyAmWjmSw.png",
+    "link": "https://documenter.getpostman.com/view/46728429/2sB3HgPhvw",
+    "category": "Backend",
+    "tags": ["Node.js", "Express", "MongoDB", "Postman"]
+  },
+  {
+    "id": 2,
+    "title": "Course Booking API Documentation",
+    "description": "RESTful API for managing course enrollments with authentication, course CRUD operations, and Postman docs.",
+    "image": "https://nobeds.com/wp-content/uploads/2022/02/637267787246626735EyCtHj.png",
+    "link": "https://example.com",
+    "category": "Backend",
+    "tags": ["Node.js", "Express", "JWT", "Postman"]
+  },
+  {
+    "id": 3,
+    "title": "Course Booking App",
+    "description": "MERN stack app with user auth, profile management, course creation, and student enrollment features.",
+    "image": "https://media.istockphoto.com/id/1053519084/vector/concept-illustration-template-of-book-your-flight-modern-flat-design-concept-for-web-page.jpg?s=612x612&w=0&k=20&c=mbEe1rYN7Xs-BayZEzg60U_gBw0ZaTyayqrnmbOERoM=",
+    "link": "https://example.com",
+    "category": "Fullstack",
+    "tags": ["React", "Node.js", "Express", "MongoDB"]
+  },
+  {
+    "id": 4,
+    "title": "E-commerce App",
+    "description": "MERN-based store with product filtering, cart updates, secure checkout, and real-time admin dashboard.",
+    "image": "https://ecommercegermany.com/wp-content/uploads/2022/04/e-commerce-1170x675.jpeg",
+    "link": " http://zuitt-bootcamp-prod-571-9056-lucas.s3-website.us-east-1.amazonaws.com",
+    "category": "Fullstack",
+    "tags": ["Vue", "Express", "MongoDB"]
+  },
+  {
+    "id": 5,
+    "title": "Airline Booking System Mockup",
+    "description": "UI concept for flight search, seat selection, and user-friendly booking confirmation.",
+    "image": "https://cdn.sriggle.tech/kantents/production/1/1345/06/ce100e07-fc5b-485e-8cd3-45f74d02f45f.png",
+    "link": "https://example.com",
+    "category": "UI/UX",
+    "tags": ["Figma", "Wireframes", "Mockup"]
+  },
+  {
+    "id": 6,
+    "title": "Airline Booking System Prototype",
+    "description": "Interactive prototype simulating airline booking features like reservation and ticket management.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy4VbciTMoZlko_hIuAqtRmMyHP0IQus38lYIxbaunQWWjWHw1x5n_HDuN4l9bZjmpHqo&usqp=CAU",
+    "link": "https://example.com",
+    "category": "UI/UX",
+    "tags": ["Figma", "Prototype", "User Flow"]
+  },
+  {
+    "id": 7,
+    "title": "Short Courses Capstone",
+    "description": "A sample paragraph for now because ...",
+    "image": "https://www.shutterstock.com/image-vector/girl-graduate-programmer-courses-university-260nw-1747927715.jpg",
+    "link": "https://example.com",
+    "category": "Fullstack",
+    "tags": ["React", "Node.js", "Express", "MongoDB"]
+  },
+  {
+    "id": 8,
+    "title": "Weather App",
+    "description": "Weather forecast web app built with React.js, showing real-time data using a public weather API.",
+    "image": "https://primathink.com/wp-content/uploads/2019/12/ReactJS-Training-PrimaThink.png",
+    "link": "https://example.com",
+    "category": "Frontend",
+    "tags": ["React", "API Integration", "CSS"]
+  },
+  {
+    "id": 9,
+    "title": "Task Manager App",
+    "description": "A simple full-stack task manager built with Node.js, Express, MongoDB, and Bootstrap UI.",
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*eo_xow3w0VS179NAJpiPhQ.jpeg",
+    "link": "https://example.com",
+    "category": "Fullstack",
+    "tags": ["Node.js", "Express", "MongoDB", "Bootstrap"]
+  }
+]

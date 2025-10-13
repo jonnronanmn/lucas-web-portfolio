@@ -15,7 +15,7 @@
     "image": "https://nobeds.com/wp-content/uploads/2022/02/637267787246626735EyCtHj.png",
     "link": "https://example.com",
     "category": "Backend",
-    "tags": ["Node.js", "Express", "JWT", "Postman"]
+    "tags": ["Node.js", "Express", "Postman"]
   },
   {
     "id": 3,

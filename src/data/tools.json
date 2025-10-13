@@ -16,9 +16,11 @@
 
 
 
-  { "id": 11, "name": "Git", "logo": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png", "category": "Other" },
-  { "id": 12, "name": "GitHub", "logo": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", "category": "Other" },
-  { "id": 13, "name": "Postman", "logo": "https://voyager.postman.com/logo/postman-logo-icon-orange.svg", "category": "Other" },
-  { "id": 14, "name": "Trello", "logo": "https://cdn.prod.website-files.com/65b1ff985ddf7f56616b12a2/66cd94d083528de63bc3bcd7_65eff70650b6ef0921d67edc_65b79d5595106ae0944343cd_65b23e78934f65c19a06f017_trello-logo.png", "category": "Other" },
-  { "id": 15, "name": "Figma", "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg", "category": "Other" }
+{ "id": 11, "name": "Git", "logo": "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png", "category": "Other" },
+{ "id": 12, "name": "GitHub", "logo": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", "category": "Other" },
+{ "id": 13, "name": "Postman", "logo": "https://voyager.postman.com/logo/postman-logo-icon-orange.svg", "category": "Other" },
+{ "id": 14, "name": "Trello", "logo": "https://cdn.prod.website-files.com/65b1ff985ddf7f56616b12a2/66cd94d083528de63bc3bcd7_65eff70650b6ef0921d67edc_65b79d5595106ae0944343cd_65b23e78934f65c19a06f017_trello-logo.png", "category": "Other" },
+{ "id": 15, "name": "Figma", "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg", "category": "Other" },
+{ "id": 16, "name": "Sublime Text", "logo": "https://upload.wikimedia.org/wikipedia/en/d/d2/Sublime_Text_3_logo.png", "category": "Other" },
+{ "id": 17, "name": "Visual Studio Code", "logo": "https://code.visualstudio.com/assets/images/code-stable.png", "category": "Other" }
 ]

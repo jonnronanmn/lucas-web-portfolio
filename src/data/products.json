@@ -20,11 +20,11 @@
   {
     "id": 3,
     "title": "Course Booking App",
-    "description": "MERN stack app with user auth, profile management, course creation, and student enrollment features.",
-    "image": "https://media.istockphoto.com/id/1053519084/vector/concept-illustration-template-of-book-your-flight-modern-flat-design-concept-for-web-page.jpg?s=612x612&w=0&k=20&c=mbEe1rYN7Xs-BayZEzg60U_gBw0ZaTyayqrnmbOERoM=",
-    "link": "https://example.com",
+    "description": "MEVN stack app with user authentication, profile management, course creation, and student enrollment features.",
+    "image": "https://media.istockphoto.com/id/1184843761/vector/fill-in-test-sheet-with-a-check-and-cross-get-an-a-on-exam-or-class-promotion-test-verify.jpg?s=612x612&w=0&k=20&c=J5JjRPPgZM1p7rtu_74IX6FesYhMRuylh_wxRplnhPo=",
+    "link": "https://course-booking-app-blush.vercel.app/",
     "category": "Fullstack",
-    "tags": ["React", "Node.js", "Express", "MongoDB"]
+    "tags": ["Vue.js", "Express.js", "MongoDB", "Node.js"]
   },
   {
     "id": 4,

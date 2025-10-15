@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "E-commerce App",
-    "description": "MERN-based store with product filtering, cart updates, secure checkout, and real-time admin dashboard.",
+    "description": "MEVN-based store with product filtering, cart updates, secure checkout, and real-time admin dashboard.",
     "image": "https://ecommercegermany.com/wp-content/uploads/2022/04/e-commerce-1170x675.jpeg",
     "link": " http://zuitt-bootcamp-prod-571-9056-lucas.s3-website.us-east-1.amazonaws.com",
     "category": "Fullstack",
@@ -37,12 +37,12 @@
   },
   {
     "id": 5,
-    "title": "Airline Booking System Mockup",
-    "description": "UI concept for flight search, seat selection, and user-friendly booking confirmation.",
-    "image": "https://cdn.sriggle.tech/kantents/production/1/1345/06/ce100e07-fc5b-485e-8cd3-45f74d02f45f.png",
-    "link": "https://example.com",
-    "category": "UI/UX",
-    "tags": ["Figma", "Wireframes", "Mockup"]
+    "title": "Fitness Tracker App",
+    "description": "Log, track, and manage your workouts in real-time with a sleek full-stack app designed to keep you motivated and on track.",
+    "image": "https://quizizz.com/media/resource/gs/quizizz-media/quizzes/92617f22-5d8a-4a57-90c6-dd32c15a5fd4",
+    "link": "https://fitness-app-react-n6przi3bt-jonn-ronans-projects.vercel.app",
+    "category": "Fullstack",
+    "tags": ["React.js", "Express.js", "Node.js", "MongoDB", "Postman"]
   },
   {
     "id": 6,

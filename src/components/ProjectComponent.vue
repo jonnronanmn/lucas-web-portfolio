@@ -11,17 +11,9 @@
 
       <!-- Projects Grid with Timeline Line -->
       <div class="projects-grid">
-        <div
-          v-for="(chunk, chunkIndex) in chunkedProjects"
-          :key="chunkIndex"
-          class="projects-row"
-        >
-          <div
-            v-for="(project, index) in chunk"
-            :key="project.id"
-            class="project-card-wrapper"
-            :class="{ 'timeline-left': index % 2 === 0, 'timeline-right': index % 2 !== 0 }"
-          >
+        <div v-for="(chunk, chunkIndex) in chunkedProjects" :key="chunkIndex" class="projects-row">
+          <div v-for="(project, index) in chunk" :key="project.id" class="project-card-wrapper"
+            :class="{ 'timeline-left': index % 2 === 0, 'timeline-right': index % 2 !== 0 }">
             <div class="project-card">
               <div class="project-image">
                 <img :src="project.image" :alt="project.title" />
@@ -35,11 +27,7 @@
                 <h5 class="fw-bold text-white">{{ project.title }}</h5>
                 <p class="project-desc">{{ project.description }}</p>
                 <div class="d-flex flex-wrap gap-2 mt-2">
-                  <span
-                    v-for="tag in project.tags || []"
-                    :key="tag"
-                    class="badge tech-badge"
-                  >
+                  <span v-for="tag in project.tags || []" :key="tag" class="badge tech-badge">
                     {{ tag }}
                   </span>
                 </div>
@@ -119,6 +107,7 @@ const chunkedProjects = computed(() => {
 .timeline-left {
   margin-right: 20px;
 }
+
 .timeline-right {
   margin-left: 20px;
 }
@@ -142,12 +131,15 @@ const chunkedProjects = computed(() => {
 .project-image {
   position: relative;
   overflow: hidden;
-  max-height: 200px;
+  height: 200px;
+  /* fixed height for uniformity */
   border-radius: 12px 12px 0 0;
 }
 
 .project-image img {
   width: 100%;
+  height: 100%;
+  /* fill the container */
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -185,9 +177,10 @@ const chunkedProjects = computed(() => {
 /* Tags */
 .tech-badge {
   background: rgba(13, 110, 253, 0.2);
-  color: #0d6efd;
-  border: 1px solid #0d6efd;
+  color: #ffffff;
+  border: 1px solid rgba(13, 110, 253, 0.2);
   font-size: 0.75rem;
+  font-weight: normal;
   padding: 0.25rem 0.5rem;
   border-radius: 20px;
 }
@@ -216,6 +209,7 @@ const chunkedProjects = computed(() => {
     max-width: 100%;
     margin: 0 !important;
   }
+
   .timeline-line {
     left: 8px;
   }

@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "CookEd (Static App)",
-    "description": "CookEd lets you explore recipes, learn cooking skills, and master dishes from around the world. Perfect for beginners and food enthusiasts!",
+    "description": "CookEd lets you explore recipes, learn cooking skills, and master dishes from around the world.",
     "image": "https://thumbs.dreamstime.com/b/chef-interacting-mobile-recipe-app-meal-preparation-vector-design-generative-ai-person-wearing-s-hat-actively-phone-393183168.jpg",
     "link": "https://jonnronanmn.github.io/educational-resources-application/",
     "category": "Frontend",
@@ -19,15 +19,6 @@
   },
   {
     "id": 3,
-    "title": "E-commerce API Documentation",
-    "description": "Dynamic E-Commerce Workflow Management with order processing, inventory updates, user authentication, and API docs via Postman.",
-    "image": "https://miro.medium.com/v2/resize:fit:1200/1*k-EVKmqO79ojOcyAmWjmSw.png",
-    "link": "https://documenter.getpostman.com/view/46728429/2sB3HgPhvw",
-    "category": "Backend",
-    "tags": ["Node.js", "Express", "MongoDB", "Postman"]
-  },
-  {
-    "id": 4,
     "title": "Course Booking API Documentation",
     "description": "RESTful API for managing course enrollments with authentication, course CRUD operations, and Postman docs.",
     "image": "https://nobeds.com/wp-content/uploads/2022/02/637267787246626735EyCtHj.png",
@@ -36,13 +27,22 @@
     "tags": ["Node.js", "Express", "Postman"]
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Course Booking App",
     "description": "MEVN stack app with user authentication, profile management, course creation, and student enrollment features.",
     "image": "https://media.istockphoto.com/id/1184843761/vector/fill-in-test-sheet-with-a-check-and-cross-get-an-a-on-exam-or-class-promotion-test-verify.jpg?s=612x612&w=0&k=20&c=J5JjRPPgZM1p7rtu_74IX6FesYhMRuylh_wxRplnhPo=",
     "link": "https://course-booking-app-blush.vercel.app/",
     "category": "Fullstack",
     "tags": ["Vue.js", "Express.js", "MongoDB", "Node.js"]
+  },
+  {
+    "id": 5,
+    "title": "E-commerce API Documentation",
+    "description": "Dynamic E-Commerce Workflow Management with order processing, inventory updates, user authentication, and API docs via Postman.",
+    "image": "https://miro.medium.com/v2/resize:fit:1200/1*k-EVKmqO79ojOcyAmWjmSw.png",
+    "link": "https://documenter.getpostman.com/view/46728429/2sB3HgPhvw",
+    "category": "Backend",
+    "tags": ["Node.js", "Express", "MongoDB", "Postman"]
   },
   {
     "id": 6,

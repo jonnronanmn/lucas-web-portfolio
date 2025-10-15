@@ -2,14 +2,15 @@
   <div>
     <!-- Floating Button -->
     <button class="contact-float-btn" @click="isOpen = true">
-      <span class="btn-icon">💬</span>
-      <span class="btn-text">Contact</span>
+      <span class="btn-icon">📩</span>
+      <span class="btn-text">Contact Me</span>
     </button>
 
     <!-- Centered Contact Modal -->
     <div class="contact-modal" v-if="isOpen">
-      <div class="contact-container">
-        <div class="contact-header d-flex justify-content-between align-items-center">
+      <div class="overlay-bg" @click="isOpen = false"></div>
+      <div class="contact-container show">
+        <div class="contact-header">
           <h5>Contact Me</h5>
           <button class="close-btn" @click="isOpen = false">&times;</button>
         </div>
@@ -32,73 +33,58 @@
 
           <div class="mb-3">
             <label for="messageInput" class="form-label">Message</label>
-            <textarea id="messageInput" rows="4" v-model="message" placeholder="Write your message here" required></textarea>
+            <textarea id="messageInput" rows="4" v-model="message" placeholder="Write your message here"
+              required></textarea>
           </div>
 
           <!-- reCAPTCHA -->
-          <div ref="recaptchaContainer" class="mb-3"></div>
+          <div ref="recaptchaContainer" class="mb-3 recaptcha-wrapper"></div>
 
-          <button type="submit" class="btn-submit w-100" :disabled="isLoading">
+          <button type="submit" class="btn-submit" :disabled="isLoading">
             {{ isLoading ? "Sending..." : "Submit" }}
           </button>
         </form>
       </div>
-
-      <div class="overlay-bg" @click="isOpen = false"></div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted } from "vue";
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 
 const notyf = new Notyf();
 
-// Modal & Loading state
 const isOpen = ref(false);
 const isLoading = ref(false);
 
-// Form fields
 const name = ref("");
 const email = ref("");
 const subject = ref("");
 const message = ref("");
 
-// reCAPTCHA
 const SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 const recaptchaContainer = ref(null);
 const recaptchaWidgetId = ref(null);
 const recaptchaToken = ref('');
 
-// Web3Forms API key
 const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
 
-// reCAPTCHA callbacks
-function onRecaptchaSuccess(token) {
-  recaptchaToken.value = token;
-}
+function onRecaptchaSuccess(token) { recaptchaToken.value = token; }
+function onRecaptchaExpired() { recaptchaToken.value = ''; }
 
-function onRecaptchaExpired() {
-  recaptchaToken.value = '';
-}
-
-// Render reCAPTCHA
 function renderRecaptcha() {
-  if (!window.grecaptcha || !recaptchaContainer.value) {
-    console.error('reCAPTCHA not loaded or container missing');
-    return;
+  if (window.grecaptcha && recaptchaContainer.value) {
+    recaptchaWidgetId.value = window.grecaptcha.render(recaptchaContainer.value, {
+      sitekey: SITE_KEY,
+      size: 'normal',
+      callback: onRecaptchaSuccess,
+      'expired-callback': onRecaptchaExpired
+    });
   }
-  recaptchaWidgetId.value = window.grecaptcha.render(recaptchaContainer.value, {
-    sitekey: SITE_KEY,
-    size: 'normal',
-    callback: onRecaptchaSuccess,
-    'expired-callback': onRecaptchaExpired
-  });
 }
 
-// Reset reCAPTCHA
 function resetRecaptcha() {
   if (recaptchaWidgetId.value !== null) {
     window.grecaptcha.reset(recaptchaWidgetId.value);
@@ -106,7 +92,6 @@ function resetRecaptcha() {
   }
 }
 
-// Handle form submission
 const handleSubmit = async () => {
   if (!recaptchaToken.value) {
     notyf.error("Please verify that you are not a robot.");
@@ -114,7 +99,6 @@ const handleSubmit = async () => {
   }
 
   isLoading.value = true;
-
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
       method: 'POST',
@@ -127,22 +111,15 @@ const handleSubmit = async () => {
         message: message.value
       })
     });
-
     const result = await response.json();
-
     if (result.success) {
       notyf.success("Message Sent!");
-      // Reset form fields
-      name.value = "";
-      email.value = "";
-      subject.value = "";
-      message.value = "";
+      name.value = email.value = subject.value = message.value = '';
       isOpen.value = false;
       resetRecaptcha();
     } else {
       notyf.error("Failed to send message.");
     }
-
   } catch (error) {
     console.error(error);
     notyf.error("Failed to send message.");
@@ -151,14 +128,10 @@ const handleSubmit = async () => {
   }
 };
 
-// Mount reCAPTCHA when script and container are ready
 onMounted(() => {
   const waitForRecaptcha = () => {
-    if (window.grecaptcha && recaptchaContainer.value) {
-      renderRecaptcha();
-    } else {
-      requestAnimationFrame(waitForRecaptcha);
-    }
+    if (window.grecaptcha && recaptchaContainer.value) renderRecaptcha();
+    else requestAnimationFrame(waitForRecaptcha);
   };
   waitForRecaptcha();
 });
@@ -173,34 +146,47 @@ onMounted(() => {
   z-index: 999;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   background-color: #0d6efd;
   color: #fff;
   border: none;
-  border-radius: 40px;
-  padding: 0.5rem 1rem;
+  border-radius: 32px;
+  padding: 0.6rem 1.2rem;
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .contact-float-btn:hover {
-  transform: translateY(-2px) scale(1.05);
-  background-color: #0b5ed7;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 
 .btn-icon {
-  font-size: 1rem;
+  font-size: 1.1rem;
   animation: wave 2s infinite;
 }
+
 @keyframes wave {
-  0%, 60%, 100% { transform: rotate(0deg); }
-  20% { transform: rotate(15deg); }
-  40% { transform: rotate(-15deg); }
+
+  0%,
+  60%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
 }
 
-/* Centered Modal */
+/* Modal */
 .contact-modal {
   position: fixed;
   inset: 0;
@@ -210,11 +196,10 @@ onMounted(() => {
   z-index: 998;
 }
 
-/* Background Overlay */
 .overlay-bg {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.55);
   cursor: pointer;
 }
 
@@ -222,23 +207,37 @@ onMounted(() => {
 .contact-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
   background-color: #031624;
-  border: 1px solid #0d6efd;
+  border: 1px solid rgba(13, 110, 253, 0.25);
   border-radius: 12px;
   padding: 2rem;
   color: #fff;
   z-index: 1;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-container.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Header */
-.contact-header h5 {
-  margin: 0;
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.2rem;
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
+
+.contact-header h5 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 .close-btn {
   background: transparent;
   border: none;
@@ -247,43 +246,51 @@ onMounted(() => {
   cursor: pointer;
 }
 
-/* Form Inputs */
+/* Inputs */
 .contact-container input,
 .contact-container textarea {
   width: 100%;
   background-color: #0d1b2a;
-  border: 1px solid #0d6efd;
+  border: 1px solid rgba(13, 110, 253, 0.2);
   color: #fff;
-  padding: 0.5rem 0.7rem;
+  padding: 0.55rem 0.7rem;
   border-radius: 6px;
   margin-bottom: 0.9rem;
   font-size: 0.85rem;
-  transition: border-color 0.3s ease;
-}
-.contact-container input::placeholder,
-.contact-container textarea::placeholder {
-  color: #ccc;
-}
-.contact-container input:focus,
-.contact-container textarea:focus {
-  outline: none;
-  border-color: #6610f2;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.2);
+}
+
+/* Submit Button */
 .btn-submit {
   background-color: #0d6efd;
   color: #fff;
   font-weight: 500;
-  padding: 0.5rem;
-  border-radius: 6px;
+  padding: 0.6rem;
+  border-radius: 8px;
   border: none;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .btn-submit:hover {
-  background-color: #6610f2;
   transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* reCAPTCHA */
+.recaptcha-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 /* Responsive */
@@ -292,12 +299,14 @@ onMounted(() => {
     width: 90%;
     padding: 1.5rem;
   }
+
   .contact-float-btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
   }
+
   .btn-icon {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 </style>

@@ -24,7 +24,7 @@
     "image": "https://nobeds.com/wp-content/uploads/2022/02/637267787246626735EyCtHj.png",
     "link": "https://documenter.getpostman.com/view/46728429/2sB3QNonis",
     "category": "Backend",
-    "tags": ["Node.js", "Express", "Postman"]
+    "tags": ["Node.js", "Express.js", "Postman"]
   },
   {
     "id": 4,
@@ -42,7 +42,7 @@
     "image": "https://miro.medium.com/v2/resize:fit:1200/1*k-EVKmqO79ojOcyAmWjmSw.png",
     "link": "https://documenter.getpostman.com/view/46728429/2sB3HgPhvw",
     "category": "Backend",
-    "tags": ["Node.js", "Express", "MongoDB", "Postman"]
+    "tags": ["Node.js", "Express.js", "MongoDB", "Postman"]
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "image": "https://ecommercegermany.com/wp-content/uploads/2022/04/e-commerce-1170x675.jpeg",
     "link": "http://zuitt-bootcamp-prod-571-9056-lucas.s3-website.us-east-1.amazonaws.com",
     "category": "Fullstack",
-    "tags": ["Vue", "Express", "MongoDB"]
+    "tags": ["Vue.js", "Express", "MongoDB"]
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
   "title": "Movies Review App",
   "description": "A full-stack app where users can browse movies and leave comments. Includes user authentication and real-time comment management.",
   "image": "https://www.shutterstock.com/image-vector/movie-characters-man-woman-romantic-260nw-2142336411.jpg",
-  "link": "https://example.com",
+  "link": "https://movies-app-client-rose.vercel.app/movies",
   "category": "Fullstack",
   "tags": ["React.js", "Express.js", "Node.js", "MongoDB"]
   },
@@ -76,6 +76,7 @@
   "title": "Blog App",
   "description": "A full-stack blogging platform where users can create, edit, and comment on posts. Includes user authentication and CRUD operations for posts and comments.",
   "image": "https://media.istockphoto.com/id/1253922154/vector/blog-authors-writing-articles.jpg?s=612x612&w=0&k=20&c=rfl7LAg3NoD2fYlPXTBvnXexaq2cFTZLxt7ronsBsWk=",
+  "link": "https://blog-application-8zrx-6nnev332t-jonn-ronans-projects.vercel.app/login",
   "category": "Fullstack",
   "tags": ["React", "Node.js", "Express", "MongoDB"]
   } 

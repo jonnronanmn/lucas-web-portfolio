@@ -13,9 +13,11 @@
       <h1 class="hero-title mt-4">Hi, I'm Jonn Ronan</h1>
       <h2 class="hero-position">Full Stack Web Developer</h2>
       <p class="hero-paragraph">
-        I transitioned from technical recruitment to web development, leveraging my understanding of the tech industry
-        and practical full-stack development experience. I focus on creating clean, user-focused digital solutions,
-        applying problem-solving skills and development know-how to build projects that are both efficient and engaging.
+        I transitioned from technical recruitment to web development, leveraging
+        my understanding of the tech industry and practical full-stack
+        development experience. I focus on creating clean, user-focused digital
+        solutions, applying problem-solving skills and development know-how to
+        build projects that are both efficient and engaging.
       </p>
     </div>
   </section>
@@ -28,7 +30,7 @@
 <style scoped>
 .hero-banner {
   position: relative;
-  background-image: url('https://static.vecteezy.com/system/resources/previews/010/520/048/non_2x/programming-code-background-vector.jpg');
+  background-image: url("https://static.vecteezy.com/system/resources/previews/010/520/048/non_2x/programming-code-background-vector.jpg");
   /* professional code wallpaper */
   background-size: cover;
   background-position: center;
@@ -87,7 +89,6 @@
   animation: fadeInDown 1s ease 0.5s forwards;
 }
 
-
 .hero-position {
   font-size: 2rem;
   font-weight: 550;
@@ -95,7 +96,6 @@
   margin-bottom: 1rem;
   animation: fadeInDown 1s ease 0.8s forwards;
 }
-
 
 /* Paragraph */
 .hero-paragraph {
@@ -155,7 +155,7 @@
 }
 
 /* Responsive */
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .hero-title {
     font-size: 2rem;
   }

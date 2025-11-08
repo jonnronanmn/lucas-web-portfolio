@@ -48,8 +48,8 @@
     "id": 6,
     "title": "E-commerce App",
     "description": "MEVN-based store with product filtering, cart updates, secure checkout, and real-time admin dashboard.",
-    "image": "https://ecommercegermany.com/wp-content/uploads/2022/04/e-commerce-1170x675.jpeg",
-    "link": "http://zuitt-bootcamp-prod-571-9056-lucas.s3-website.us-east-1.amazonaws.com",
+    "image": "https://static.vecteezy.com/system/resources/thumbnails/008/974/544/small/e-commerce-set-icon-symbol-template-for-graphic-and-web-design-collection-logo-illustration-vector.jpg",
+    "link": "https://e-commerce-application-mu.vercel.app/",
     "category": "Fullstack",
     "tags": ["Vue.js", "Express", "MongoDB"]
   },
@@ -63,21 +63,21 @@
     "tags": ["React.js", "Express.js", "Node.js", "MongoDB", "Postman"]
   },
   {
-  "id": 8,
-  "title": "Movies Review App",
-  "description": "A full-stack app where users can browse movies and leave comments. Includes user authentication and real-time comment management.",
-  "image": "https://www.shutterstock.com/image-vector/movie-characters-man-woman-romantic-260nw-2142336411.jpg",
-  "link": "https://movies-app-client-rose.vercel.app/movies",
-  "category": "Fullstack",
-  "tags": ["React.js", "Express.js", "Node.js", "MongoDB"]
+    "id": 8,
+    "title": "Movies Review App",
+    "description": "A full-stack app where users can browse movies and leave comments. Includes user authentication and real-time comment management.",
+    "image": "https://www.shutterstock.com/image-vector/movie-characters-man-woman-romantic-260nw-2142336411.jpg",
+    "link": "https://movies-app-client-rose.vercel.app/movies",
+    "category": "Fullstack",
+    "tags": ["React.js", "Express.js", "Node.js", "MongoDB"]
   },
   {
-  "id": 9,
-  "title": "Blog App",
-  "description": "A full-stack blogging platform where users can create, edit, and comment on posts. Includes user authentication and CRUD operations for posts and comments.",
-  "image": "https://media.istockphoto.com/id/1253922154/vector/blog-authors-writing-articles.jpg?s=612x612&w=0&k=20&c=rfl7LAg3NoD2fYlPXTBvnXexaq2cFTZLxt7ronsBsWk=",
-  "link": "https://blog-application-8zrx-6nnev332t-jonn-ronans-projects.vercel.app/login",
-  "category": "Fullstack",
-  "tags": ["React", "Node.js", "Express", "MongoDB"]
-  } 
+    "id": 9,
+    "title": "Blog App",
+    "description": "A full-stack blogging platform where users can create, edit, and comment on posts. Includes user authentication and CRUD operations for posts and comments.",
+    "image": "https://media.istockphoto.com/id/1253922154/vector/blog-authors-writing-articles.jpg?s=612x612&w=0&k=20&c=rfl7LAg3NoD2fYlPXTBvnXexaq2cFTZLxt7ronsBsWk=",
+    "link": "https://blog-application-8zrx-6nnev332t-jonn-ronans-projects.vercel.app/login",
+    "category": "Fullstack",
+    "tags": ["React", "Node.js", "Express", "MongoDB"]
+  }
 ]

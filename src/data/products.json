@@ -31,7 +31,7 @@
     "title": "Course Booking App",
     "description": "MEVN stack app with user authentication, profile management, course creation, and student enrollment features.",
     "image": "https://media.istockphoto.com/id/1184843761/vector/fill-in-test-sheet-with-a-check-and-cross-get-an-a-on-exam-or-class-promotion-test-verify.jpg?s=612x612&w=0&k=20&c=J5JjRPPgZM1p7rtu_74IX6FesYhMRuylh_wxRplnhPo=",
-    "link": "https://course-booking-app-blush.vercel.app/",
+    "link": "https://course-booking-app-black.vercel.app/",
     "category": "Fullstack",
     "tags": ["Vue.js", "Express.js", "MongoDB", "Node.js"]
   },
